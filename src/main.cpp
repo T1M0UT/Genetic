@@ -1,10 +1,14 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "SFMLWorld.h"
+#include "Board.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1600, 800), "SFML Application");
-    auto world = new SFMLGame::SFMLWorld(window);
+    auto board = UIBoard(10, 10);
+    board.init();
+    board.draw();
+
+    /*sf::RenderWindow window(sf::VideoMode(1600, 800), "SFML Application");
+    //auto world = new SFMLGame::SFMLWorld(window);
 
     sf::CircleShape shape;
     shape.setRadius(40.f);
@@ -22,9 +26,9 @@ int main() {
         }
 
         window.clear();
-        world->draw();
+        //world->draw();
         //window.draw(shape);
         window.display();
-    }
+    }*/
     return 0;
 }

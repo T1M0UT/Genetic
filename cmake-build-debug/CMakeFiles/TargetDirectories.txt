@@ -1,0 +1,8 @@
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/install/local.dir
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/list_install_components.dir
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/install/strip.dir
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/install.dir
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/genetic.analyze.dir
+/Users/tymur/CLionProjects/genetic/cmake-build-debug/CMakeFiles/genetic.dir
