@@ -6,18 +6,18 @@ For the greater performance, the project is implemented in C++. It uses multithr
 
 A prototype implemented in JS:
 https://editor.p5js.org/krasnianskiy/full/ueF5nNSmh
-![Example](https://imgur.com/a/oQIZI2m)
+![Example](https://i.imgur.com/pd6qdSk.jpeg)
 
 ### Multicell organisms
-![Families](https://imgur.com/a/OiVnJX3)
+![Families](https://i.imgur.com/sWtmF1H.jpeg)
 
 ## Tech
 - C++
 - CMake
 - CLion
 
-Simplified UML scheme:
-![UML](https://imgur.com/a/jWFX8yH)
+## Simplified UML scheme:
+![UML](https://i.imgur.com/FIP0qWO.jpeg)
 
 ## Installation
 - Install SFML first
