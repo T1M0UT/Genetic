@@ -8,37 +8,56 @@
 
 #include <tuple>
 #include <array>
+#include <cstdint>
+
+const uint8_t GENOME_SIZE = 64;
 
 class Entity {
 public:
-    virtual void draw() const = 0;
+    virtual ~Entity() = default;
 };
 
-class EmptyEntity: public Entity {
-    void draw() const override;
-};
+class EmptyEntity: public Entity { };
+
+class Wall: public Entity { };
+
+class Poison: public Entity { };
+
+class Organic: public Entity { };
 
 class CellState {
 public:
-    bool hasMoved;
-    uint8_t currentCommand;
-};
+    bool didMove = false;
+    int energy;
+    int generation;
+    int minerals;
+    uint8_t getCurrentCommand() const { return currentCommand; }
+    void setCurrentCommand(uint8_t command) { currentCommand = command; currentCommand %= GENOME_SIZE; }
+    void incrementCurrentCommand(uint8_t value) { currentCommand += value; currentCommand %= GENOME_SIZE; }
+    void incrementCurrentCommand() { ++currentCommand; currentCommand %= GENOME_SIZE; }
 
-class Cell : public Entity {
 protected:
+    uint8_t currentCommand;
+
+};
+
+class Cell: public Entity {
+    using Genome = std::array<uint8_t , 64>;
+
+public:
+    Cell(Genome genome, CellState state): genome{genome}, state{state}{};
+    Cell();
+    uint8_t peek(uint8_t pos);
+    uint8_t peek();
+    void setValue(int pos, uint8_t value);
+
+
     CellState state;
-    std::array<uint8_t , 64> genome;
-};
-
-class UICell : public Cell {
 public:
-    explicit UICell();
-    void draw() const override;
-};
+    ~Cell() override = default;
 
-class UIOrganic : public Entity {
-public:
-    void draw() const override;
+protected:
+    Genome genome;
 };
 
 

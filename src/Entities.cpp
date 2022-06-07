@@ -6,20 +6,23 @@
 #include <iostream>
 #include "Entities.h"
 
-UICell::UICell() {
-    for (uint8_t i = 0; i < genome.size(); ++i){
-        genome[i] = 11;
+
+Cell::Cell() {
+    genome = {};
+    state = {};
+    for (unsigned char & i : genome){
+        i = 0;
     }
 }
 
-void UICell::draw() const {
-    std::cout << "C";
+uint8_t Cell::peek(uint8_t pos) {
+    return genome[pos % GENOME_SIZE];
 }
 
-void UIOrganic::draw() const {
-    std::cout << "M";
+uint8_t Cell::peek() {
+    return genome[state.getCurrentCommand()];
 }
 
-void EmptyEntity::draw() const {
-    std::cout << " ";
+void Cell::setValue(int pos, uint8_t value) {
+    genome[pos % GENOME_SIZE] = value;
 }

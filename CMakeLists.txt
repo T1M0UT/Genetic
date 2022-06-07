@@ -55,7 +55,7 @@ include(cmake/CompilerWarnings.cmake)
 ##########################################################
 
 #! Project main executable source compilation
-add_executable(${PROJECT_NAME} src/main.cpp src/Board.cpp src/Board.h src/Entities.cpp src/Entities.h)
+add_executable(${PROJECT_NAME} src/main.cpp src/Board.cpp src/Board.h src/Entities.cpp src/Entities.h src/Game.cpp src/Game.h src/GameParams.cpp src/GameParams.h src/CPU.cpp src/CPU.h src/GameSaver.cpp src/GameSaver.h)
 
 #! Put path to your project headers
 target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
